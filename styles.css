@@ -1,0 +1,72 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  /* height: 100%; */
+
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; /* Set background color */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
+  /* grid-template-columns: 1fr auto 1fr auto 1fr;
+  grid-template-rows: 1fr auto 1fr; */
+  height: 100vh;
+  /* gap: 10px; */
+  /* margin: 20px; */
+  border: 2px solid black;
+  /* overflow: hidden; */
+  /* position: relative; */
+}
+
+.box {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #252424;
+  /* resize: both; */
+  /* overflow: hidd.x``en; */
+}
+.center-div {
+  position: absolute;
+  top: 50%; /* Position at 50% from the top */
+  left: 50%; /* Position at 50% from the left */
+  transform: translate(-50%, -50%); /* Center the element */
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background-color: #808080;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition effect */
+  z-index: 100;
+}
+.separator.horizontal {
+  width: 100%;
+  height: 5px;
+  /* background-color: #aaa; */
+  cursor: row-resize;
+  position: absolute;
+  /* z-index: 100; */
+  /* top: 50%; */
+  top: calc(51.5% - 2.5px); /* Position the horizontal separator in the center */
+  /* right: 50%; */
+  /* transform: translateY(-50%); */
+}
+.separator.vertical {
+  width: 5px;
+  height: 100%;
+  /* background-color: #aaa; */
+  cursor: col-resize;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 2.5px); /* Position the vertical separator in the center */
+  z-index: 100;
+}
